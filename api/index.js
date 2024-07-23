@@ -1,4 +1,4 @@
-import express from "express"
+import express from "express"      //  "type": "module",
 import mongoose from "mongoose"
 const app = express()
 import dotenv from "dotenv"
