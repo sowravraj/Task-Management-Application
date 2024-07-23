@@ -17,3 +17,7 @@ app.listen(process.env.PORT,()=>{
     console.log(`Server running on the ${process.env.PORT}`);
 })
 
+// Create a test API route
+app.get("/",(req,res)=>{
+    res.json({message:"API is working"})
+})
