@@ -3,7 +3,9 @@ import mongoose from "mongoose"
 const app = express()
 import dotenv from "dotenv"
 dotenv.config()
-// app.use(express.json())
+import userRoutes from "./routes/user.route.js"
+import authRoutes from "./routes/auth.route.js"
+app.use(express.json())
 
 mongoose.connect(process.env.MONGO_URL)
 .then(()=>{
@@ -18,6 +20,9 @@ app.listen(process.env.PORT,()=>{
 })
 
 // Create a test API route
-app.get("/",(req,res)=>{
-    res.json({message:"API is working"})
-})
+// app.get("/",(req,res)=>{
+//     res.json({message:"API is working"})
+// })
+
+app.use("/api/user",userRoutes)
+app.use("/api/auth",authRoutes)
