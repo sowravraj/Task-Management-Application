@@ -15,7 +15,7 @@ const userSchema = new mongoose.Schema({   //creating a schema
         required:true,
         unique:true
     }
-},{timestamps:true})
+},{timestamps:true})  
 
 const User = mongoose.model("User",userSchema)
 

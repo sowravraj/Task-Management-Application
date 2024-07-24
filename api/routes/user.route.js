@@ -7,7 +7,7 @@ const router = express.Router()
 //     res.json({
 //         message:"router is working"
 //     })
-// })
+// }) 
 
 //adding function in the controller
 
